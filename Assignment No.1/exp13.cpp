@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     int a;
-    cout<<"Enter a number to calculate the factorial :";
+    cout<<"Enter a number to calculate the factorial : ";
     cin>> a;
 
     int fact = 1;
