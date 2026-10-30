@@ -1,21 +1,24 @@
-// To find largest of three numbers using an if else statement.
-
+//virtual function
 #include<iostream>
 using namespace std;
 
-int main() {
-    int a, b, c;
-
-    cout<< "Enter any three numbers : \n";
-    cin>> a>> b>> c;
-
-    if (a >= b && a >= c) {
-        cout << "The largest number is : " << a << endl;
-    } 
-    else if (b >= a && b >= c) {
-        cout << "The largest number is : " << b << endl;
-    } 
-    else {
-        cout << "The largest number is : " << c << endl;
+class Shape {
+public:
+    virtual void area() {
+        cout << "Area of Shape";
     }
+};
+
+class Rectangle : public Shape {
+public:
+    void area() override {
+        cout << "Area of Rectangle";
+    }
+};
+
+int main() {
+    Rectangle R;
+    Shape *ptr = &R;
+    ptr->area();
+    return 0;
 }
