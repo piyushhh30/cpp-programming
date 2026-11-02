@@ -1,4 +1,4 @@
-Division by zero:
+//Division by zero:
 #include <iostream>
 using namespace std;
 
